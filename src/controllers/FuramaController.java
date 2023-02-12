@@ -17,17 +17,13 @@ public class FuramaController {
             select = Integer.parseInt(scanner.nextLine());
             switch (select) {
                 case 1:
-                    System.out.println("1. Display list employees: ");
-                    System.out.println("2. Add new employee: ");
-                    System.out.println("3. Delete employee: ");
-                    System.out.println("4. Edit employee: ");
-                    System.out.println("5. Return main menu: ");
+                    EmployeeManagementController employeeManagementController = new EmployeeManagementController();
+                    employeeManagementController.employeeDisplayMenu();
                     break;
                 case 2:
-                    System.out.println("1. Display list customers: ");
-                    System.out.println("2. Add new customer: ");
-                    System.out.println("3. Edit customer: ");
-                    System.out.println("4. Return main menu: ");
+                    CustomerManagementController customerManagementController = new CustomerManagementController();
+                    customerManagementController.customerDisplayMenu();
+
                     break;
                 case 3:
                     System.out.println("1. Display list facility: ");
