@@ -1,7 +1,6 @@
 package services.customerservice;
 
 import models.person.Customer;
-import models.person.Employee;
 import repository.customerrepository.CustomerRepository;
 
 public class CustomerService implements ICustomerService {
@@ -23,7 +22,7 @@ customerRepository.edit(customer);
     }
 
     @Override
-    public Employee findCode(String code) {
+    public Customer findCode(String code) {
         customerRepository.findCode(code);
         return null;
     }

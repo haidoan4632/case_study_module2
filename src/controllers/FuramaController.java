@@ -26,10 +26,8 @@ public class FuramaController {
 
                     break;
                 case 3:
-                    System.out.println("1. Display list facility: ");
-                    System.out.println("2. Add new facility: ");
-                    System.out.println("3. Display list facility maintenance: ");
-                    System.out.println("4. Return main menu: ");
+                 FacilityManagementController facilityManagementController = new FacilityManagementController();
+                 facilityManagementController.FacilityDisplayMenu();
 
                     break;
                 case 4:

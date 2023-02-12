@@ -1,7 +1,6 @@
 package services.customerservice;
 
 import models.person.Customer;
-import models.person.Employee;
 
 public interface ICustomerService {
     void list();
@@ -10,5 +9,5 @@ public interface ICustomerService {
 
     void edit(Customer customer);
 
-    Employee findCode(String code);
+    Customer findCode(String code);
 }
