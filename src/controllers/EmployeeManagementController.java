@@ -9,14 +9,14 @@ public class EmployeeManagementController {
     public void employeeDisplayMenu() {
         Scanner scanner = new Scanner(System.in);
         EmployeeService employeeService = new EmployeeService();
-        int menu = 0;
+        int menu;
         do {
             System.out.println("1. Display list employees: ");
             System.out.println("2. Add new employee: ");
             System.out.println("3. Delete employee: ");
             System.out.println("4. Edit employee: ");
             System.out.println("5. Return main menu: ");
-
+            menu = Integer.parseInt(scanner.nextLine());
             switch (menu) {
                 case 1:
                     employeeService.list();
@@ -68,8 +68,8 @@ public class EmployeeManagementController {
                     Employee employee2 = employeeService.findCode(codeEdit);
                     try {
                         if (employee2 != null) {
-                            int choice = 0;
                             do {
+                                menu = Integer.parseInt(scanner.nextLine());
                                 System.out.println("Input the information you want to correct:  ");
                                 System.out.println("1. Name: ");
                                 System.out.println("2. Date of Birth: ");
@@ -77,11 +77,11 @@ public class EmployeeManagementController {
                                 System.out.println("4. idCard: ");
                                 System.out.println("5. phoneNumber: ");
                                 System.out.println("6. email: ");
-                                System.out.println("7. employeeCode: "); // Em chưa biết cần hay không?
+                                System.out.println("7. employeeCode: ");
                                 System.out.println("8. Degree: ");
                                 System.out.println("9. Position: ");
                                 System.out.println("10. salary: ");
-                                switch (choice) {
+                                switch (menu) {
                                     case 1:
                                         System.out.println("Input new name: ");
                                         String newName = scanner.nextLine();

@@ -14,6 +14,7 @@ public class EmployeeRepository implements IEmployeeRepository {
         employeeList.add(new Employee("Quốc", "2/1/1998", "nam", "2", "0905123124", "12345@gmail.com", "2", "cap1", "boi ban", "2$"));
         employeeList.add(new Employee("Đào", "3/1/1998", "nam", "3", "0905123125", "123456@gmail.com", "3", "cap1", "dau bep", "3$"));
         employeeList.add(new Employee("Trinh", "4/1/1998", "nu", "4", "0905123126", "1234567@gmail.com", "4", "cap1", "le tan", "4$"));
+
     }
 
 

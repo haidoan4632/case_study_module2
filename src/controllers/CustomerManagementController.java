@@ -9,14 +9,14 @@ public class CustomerManagementController {
     public void customerDisplayMenu() {
         Scanner scanner = new Scanner(System.in);
         CustomerService customerService = new CustomerService();
-        int menu = 0;
+        int choice;
         do {
             System.out.println("1. Display list customers: ");
             System.out.println("2. Add new customer: ");
             System.out.println("3. Edit customer: ");
             System.out.println("4. Return main menu: ");
-
-            switch (menu) {
+            choice = Integer.parseInt(scanner.nextLine());
+            switch (choice) {
                 case 1:
                     customerService.list();
                     break;
@@ -49,7 +49,6 @@ public class CustomerManagementController {
                     Customer customer1 = customerService.findCode(codeEdit);
                     try {
                         if (customer1 != null) {
-                            int choice = 0;
                             do {
                                 System.out.println("Input the information you want to correct:  ");
                                 System.out.println("1. Name: ");
