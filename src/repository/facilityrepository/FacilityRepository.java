@@ -1,5 +1,6 @@
 package repository.facilityrepository;
 
+import data.ReadWriteRoom;
 import models.facility.Facility;
 import models.facility.Room;
 import models.facility.Villa;
@@ -12,6 +13,9 @@ public class FacilityRepository implements IFacilityRepository {
 
     static Map<Room, Integer> roomIntegerMap = new LinkedHashMap<>();
     static Map<Villa, Integer> villaIntegerMap = new LinkedHashMap<>();
+
+
+
     Scanner scanner = new Scanner(System.in);
 
     static {
@@ -35,7 +39,8 @@ public class FacilityRepository implements IFacilityRepository {
             switch (choice) {
                 case 1:
                     System.out.println(roomIntegerMap.entrySet());
-
+                    roomIntegerMap = ReadWriteRoom.readRoomFacility();
+                    break;
                 case 2:
             }
             while (true) ;

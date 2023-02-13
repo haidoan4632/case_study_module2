@@ -17,11 +17,16 @@ public class FacilityManagementController {
 
             switch (menu){
                 case 1:
-                    facilityService.
+                    facilityService.list();
+                    break;
                 case 2:
+                    break;
                 case 3:
+                    break;
                 case 4:
+                    break;
             }
+            while (true);
         }
         while (true);
     }
