@@ -1,21 +1,31 @@
 package models.facility;
 
 public abstract class Facility {
+    private String serviceCode;
     private String serviceName;
     private String usableArea; //diện tích sử dụng
     private String rentalCost; //chi phí cho thuê
     private String maxNumberOfPeople; //số người tối đa
     private String rentalType; // kiểu thuê
 
-    public Facility() {
-    }
-
-    public Facility(String serviceName, String usableArea, String rentalCost, String maxNumberOfPeople, String rentalType) {
+    public Facility(String serviceCode, String serviceName, String usableArea, String rentalCost, String maxNumberOfPeople, String rentalType) {
+        this.serviceCode = serviceCode;
         this.serviceName = serviceName;
         this.usableArea = usableArea;
         this.rentalCost = rentalCost;
         this.maxNumberOfPeople = maxNumberOfPeople;
         this.rentalType = rentalType;
+    }
+
+    public Facility() {
+    }
+
+    public String getServiceCode() {
+        return serviceCode;
+    }
+
+    public void setServiceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
     }
 
     public String getServiceName() {
@@ -61,7 +71,8 @@ public abstract class Facility {
     @Override
     public String toString() {
         return "Facility{" +
-                "serviceName='" + serviceName + '\'' +
+                "serviceCode='" + serviceCode + '\'' +
+                ", serviceName='" + serviceName + '\'' +
                 ", usableArea='" + usableArea + '\'' +
                 ", rentalCost='" + rentalCost + '\'' +
                 ", maxNumberOfPeople='" + maxNumberOfPeople + '\'' +

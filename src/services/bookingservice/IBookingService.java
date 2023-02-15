@@ -1,7 +1,9 @@
 package services.bookingservice;
 
+import models.booking.Booking;
+
 public interface IBookingService {
-    void addBooking();
+    void addBooking(Booking booking);
 
     //thêm
     void displayBooking();

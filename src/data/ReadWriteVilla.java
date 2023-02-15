@@ -21,15 +21,16 @@ public class ReadWriteVilla {
             Villa villa;
             while ((line = bufferedReader.readLine()) != null) {
                 temp = line.split(",");
-                String serviceName = temp[0];
-                String usableArea = temp[1];
-                String rentalCost = temp[2];
-                String maxNumberOfPeople = temp[3];
-                String rentalType = temp[4];
-                String roomStandard = temp[5];
-                String swimmingArea = temp[6];
-                String numberOfFloors = temp[7];
-                villa = new Villa(serviceName, usableArea, rentalCost, maxNumberOfPeople, rentalType, roomStandard, swimmingArea, numberOfFloors);
+                String serviceCode = temp[0];
+                String serviceName = temp[1];
+                String usableArea = temp[2];
+                String rentalCost = temp[3];
+                String maxNumberOfPeople = temp[4];
+                String rentalType = temp[5];
+                String roomStandard = temp[6];
+                String swimmingArea = temp[7];
+                String numberOfFloors = temp[8];
+                villa = new Villa(serviceCode, serviceName, usableArea, rentalCost, maxNumberOfPeople, rentalType, roomStandard, swimmingArea, numberOfFloors);
                 villaIntegerMap.put(villa, Integer.parseInt(temp[8]));
             }
         } catch (IOException e) {

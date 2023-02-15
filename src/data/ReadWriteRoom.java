@@ -21,13 +21,14 @@ public class ReadWriteRoom {
             Room room;
             while ((line = bufferedReader.readLine()) != null) {
                 temp = line.split(",");
-                String serviceName = temp[0];
-                String usableArea = temp[1];
-                String rentalCost = temp[2];
-                String maxNumberOfPeople = temp[3];
-                String rentalType = temp[4];
-                String freeServiceIncluded = temp[5];
-                room = new Room(serviceName, usableArea, rentalCost, maxNumberOfPeople, rentalType, freeServiceIncluded);
+                String serviceCode = temp[0];
+                String serviceName = temp[1];
+                String usableArea = temp[2];
+                String rentalCost = temp[3];
+                String maxNumberOfPeople = temp[4];
+                String rentalType = temp[5];
+                String freeServiceIncluded = temp[6];
+                room = new Room(serviceCode,serviceName, usableArea, rentalCost, maxNumberOfPeople, rentalType, freeServiceIncluded);
                 roomIntegerMap.put(room, Integer.parseInt(temp[6]));
             }
         } catch (IOException e) {

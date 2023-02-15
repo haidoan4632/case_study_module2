@@ -1,6 +1,7 @@
 package services.facilityservice;
 
-import models.facility.Facility;
+import models.facility.Room;
+import models.facility.Villa;
 import repository.facilityrepository.FacilityRepository;
 
 public class FacilityService implements IFacilityService {
@@ -12,10 +13,21 @@ public class FacilityService implements IFacilityService {
         facilityRepository.list();
     }
 
+//    @Override
+//    public void add(Facility facility) {
+//        facilityRepository.add(facility);
+//    }
+
     @Override
-    public void add(Facility facility) {
-        facilityRepository.add(facility);
+    public void add(Villa villa) {
+        facilityRepository.add(villa);
     }
+
+    @Override
+    public void add(Room room) {
+facilityRepository.add(room);
+    }
+
 
     @Override
     public void displayMaintenance() {

@@ -4,88 +4,63 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class CheckAddNewFacility {
-    static final private String REGEX_VILLA_CODE = "";
-    static final private String REGEX_ROOM_CODE = "";
-    static final private String REGEX_NAME_SERVICE = "";
-    static final private String REGEX_AREA = "";
-    static final private String REGEX_PRICE = "";
-    static final private String REGEX_MAX_PERSON = "";
+    static final private String REGEX_VILLA_CODE = "^(SVVL)-\\d{4}$";
+    static final private String REGEX_ROOM_CODE = "^(SVRO)-\\d{4}$";
+    static final private String REGEX_NAME_SERVICE = "^[A-Z][a-z0-9]*$";
+    static final private String REGEX_AREA = "^0*([1-9]\\d{2,}|[3-9]\\d|[1-9]\\d{2,}[.]\\d+|[3-9]\\d[.]\\d+)$";
+    static final private String REGEX_PRICE = "^0*\\d+.*\\d+$";
+    static final private String REGEX_MAX_PERSON = "^0*([1-9]|1[0-9])$";
     static final private String REGEX_RENTAL_TYPE = "";
-    static final private String REGEX_NUMBER_OF_FLOORS = "";
-    static final private String REGEX_STANDARD_ROOM = "";
-    static final private String REGEX_DATE_OF_BIRTH = "";
-    static final private String REGEX_NUMBER_OF_USES = "";
+    static final private String REGEX_NUMBER_OF_FLOORS = "^0*[1-9]\\d*$";
+    static final private String REGEX_STANDARD_ROOM = "\"^[A-Z][a-z]*+(\\s[a-z]+)*$";
+    static final private String REGEX_DATE_OF_BIRTH = "(0[1-9]|[1-2]\\d|3[0-1])/(0\\d|1[0-2])/(\\d{4})";
+
     private Pattern pattern;
     private Matcher matcher;
 
-    public boolean checkVillaCode(String regex) {
-        pattern = Pattern.compile(REGEX_VILLA_CODE);
-        matcher = pattern.matcher(regex);
-        return matcher.matches();
+    public static String checkVillaCode() {
+        return REGEX_VILLA_CODE;
+
     }
 
-    public boolean checkRoomId(String regex) {
-        pattern = Pattern.compile(REGEX_ROOM_CODE);
-        matcher = pattern.matcher(regex);
-        return matcher.matches();
+    public static String checkRoomCode() {
+        return REGEX_ROOM_CODE;
     }
 
-    public boolean checkNameService(String regex) {
-        pattern = Pattern.compile(REGEX_NAME_SERVICE);
-        matcher = pattern.matcher(regex);
-        return matcher.matches();
+    public static String checkNameService() {
+        return REGEX_NAME_SERVICE;
+
     }
 
-    public boolean checkArea(String regex) {
-        pattern = Pattern.compile(REGEX_AREA);
-        matcher = pattern.matcher(regex);
-        return matcher.matches();
+    public static String checkArea() {
+        return REGEX_AREA;
     }
 
-    public boolean checkPrice(String regex) {
-        pattern = Pattern.compile(REGEX_PRICE);
-        matcher = pattern.matcher(regex);
-        return matcher.matches();
+    public static String checkPrice() {
+        return REGEX_PRICE;
     }
 
-    public boolean checkRentalType(String regex) {
-        pattern = Pattern.compile(REGEX_RENTAL_TYPE);
-        matcher = pattern.matcher(regex);
-        return matcher.matches();
+    public static String checkRentalType() {
+        return REGEX_RENTAL_TYPE;
     }
 
-    public boolean checkStandardRoom(String regex) {
-        pattern = Pattern.compile(REGEX_STANDARD_ROOM);
-        matcher = pattern.matcher(regex);
-        return matcher.matches();
+    public static String checkStandardRoom() {
+        return REGEX_STANDARD_ROOM;
     }
 
-    public boolean checkNumberOfFloors(String regex) {
-        pattern = Pattern.compile(REGEX_NUMBER_OF_FLOORS);
-        matcher = pattern.matcher(regex);
-        return matcher.matches();
+    public static String checkNumberOfFloors() {
+        return REGEX_NUMBER_OF_FLOORS;
     }
 
-    public boolean checkDateOfBirth(String regex) {
-        pattern = Pattern.compile(REGEX_DATE_OF_BIRTH);
-        matcher = pattern.matcher(regex);
-        return matcher.matches();
+    public static String checkDateOfBirth() {
+        return REGEX_DATE_OF_BIRTH;
     }
 
-    public boolean checkMaximumPerson(String regex) {
-        pattern = Pattern.compile(REGEX_MAX_PERSON);
-        matcher = pattern.matcher(regex);
-        return matcher.matches();
-    }
-
-    public boolean checkNumberOfUses(String regex) {
-        pattern = Pattern.compile(REGEX_NUMBER_OF_USES);
-        matcher = pattern.matcher(regex);
-        return matcher.matches();
+    public static String checkMaxPerson() {
+        return REGEX_MAX_PERSON;
     }
 
     public static void main(String[] args) {
 
     }
-
 }

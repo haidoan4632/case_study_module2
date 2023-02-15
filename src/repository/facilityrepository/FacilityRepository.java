@@ -2,7 +2,6 @@ package repository.facilityrepository;
 
 import data.ReadWriteRoom;
 import data.ReadWriteVilla;
-import models.facility.Facility;
 import models.facility.Room;
 import models.facility.Villa;
 
@@ -20,13 +19,13 @@ public class FacilityRepository implements IFacilityRepository {
     Scanner scanner = new Scanner(System.in);
 
     static {
-        roomIntegerMap.put(new Room("A", "50m vuông", "10$", "5", "1 ngày", "tắm nắng"), 1);
-        roomIntegerMap.put(new Room("B", "100m vuông", "50$", "10", "1 tháng", "tắm nắng"), 2);
-        roomIntegerMap.put(new Room("C", "200m vuông", "100$", "15", "1 năm", "tắm nắng"), 3);
+        roomIntegerMap.put(new Room("SVRO1234","A", "50m vuông", "10$", "5", "1 ngày", "tắm nắng"), 1);
+        roomIntegerMap.put(new Room("SVRO1111","B", "100m vuông", "50$", "10", "1 tháng", "tắm nắng"), 2);
+        roomIntegerMap.put(new Room("SVRO4567","C", "200m vuông", "100$", "15", "1 năm", "tắm nắng"), 3);
 
-        villaIntegerMap.put(new Villa("D", "50m vuông", "100$", "5", "1 ngày", "Bình thường", "200m vuông", "3"), 4);
-        villaIntegerMap.put(new Villa("E", "100m vuông", "200$", "10", "1 tháng", "Vip", "300m vuông", "3"), 5);
-        villaIntegerMap.put(new Villa("F", "200m vuông", "300$", "15", "1 năm", "Girl vip", "400m vuông", "3"), 6);
+        villaIntegerMap.put(new Villa("SVVL1234","D", "50m vuông", "100$", "5", "1 ngày", "Bình thường", "200m vuông", "3"), 4);
+        villaIntegerMap.put(new Villa("SVVL3456","E", "100m vuông", "200$", "10", "1 tháng", "Vip", "300m vuông", "3"), 5);
+        villaIntegerMap.put(new Villa("SVVL1998","F", "200m vuông", "300$", "15", "1 năm", "Girl vip", "400m vuông", "3"), 6);
 
     }
 
@@ -47,29 +46,43 @@ public class FacilityRepository implements IFacilityRepository {
                     System.out.println(villaIntegerMap.entrySet());
                     villaIntegerMap = ReadWriteVilla.readVillaFacility();
                     break;
+                default:
+                    return;
             }
-            while (true) ;
-
         }
         while (true);
     }
-    @Override
-    public void add(Facility facility) {
-        System.out.println("You want choice service:  ");
-        System.out.println("1.Room");
-        System.out.println("2.Villa");
-        int choice = Integer.parseInt(scanner.nextLine());
-        switch (choice) {
-            case 1:
-                roomIntegerMap.put((Room) facility, 1);
-                ReadWriteRoom.writeRoomFacility(roomIntegerMap);
-                break;
+//    @Override
+//    public void add(Facility facility) {
+//        System.out.println("1. add room, 2. add villa,");
+//        int choice = Integer.parseInt(scanner.nextLine());
+//
+//
+//        switch (choice) {
+//            case 1:
+//                roomIntegerMap.put((Room) facility, 1);
+//                ReadWriteRoom.writeRoomFacility(roomIntegerMap);
+//                break;
+//
+//            case 2:
+//                villaIntegerMap.put((Villa) facility, 1);
+//                ReadWriteVilla.writeVillaFacility(villaIntegerMap);
+//                break;
+//            default:
+//                return;
+//        }
+//    }
 
-            case 2:
-                villaIntegerMap.put((Villa) facility, 1);
-                ReadWriteVilla.writeVillaFacility(villaIntegerMap);
-                break;
-        }
+    @Override
+    public void add(Villa villa) {
+        villaIntegerMap.put( villa, 1);
+        ReadWriteVilla.writeVillaFacility(villaIntegerMap);
+    }
+
+    @Override
+    public void add(Room room) {
+        roomIntegerMap.put(room, 1);
+        ReadWriteRoom.writeRoomFacility(roomIntegerMap);
     }
 
     @Override

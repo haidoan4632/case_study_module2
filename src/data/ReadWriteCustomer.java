@@ -62,7 +62,7 @@ public class ReadWriteCustomer {
                 bufferedWriter.write(customer1.getName() + "," + customer1.getDateOfBirth() + ","
                         + customer1.getGender() + "," + customer1.getIdCard() + "," + customer1.getPhoneNumber()
                         + "," + customer1.getEmail() + "," + customer1.getCustomerCode() + ","
-                        + customer1.getCustomerType() + "," + customer1.getAddress());
+                        + customer1.getCustomerType() + "," + customer1.getAddress() + "\n");
             } catch (IOException e) {
                 e.printStackTrace();
             }

@@ -1,0 +1,4 @@
+Villa{roomStandard='Bình thường', swimmingArea='200m vuông', numberOfFloors='3'} Facility{serviceName='D', usableArea='50m vuông', rentalCost='100$', maxNumberOfPeople='5', rentalType='1 ngày'},4
+Villa{roomStandard='Vip', swimmingArea='300m vuông', numberOfFloors='3'} Facility{serviceName='E', usableArea='100m vuông', rentalCost='200$', maxNumberOfPeople='10', rentalType='1 tháng'},5
+Villa{roomStandard='Girl vip', swimmingArea='400m vuông', numberOfFloors='3'} Facility{serviceName='F', usableArea='200m vuông', rentalCost='300$', maxNumberOfPeople='15', rentalType='1 năm'},6
+Villa{roomStandard='1', swimmingArea='1', numberOfFloors='1'} Facility{serviceName='1', usableArea='1', rentalCost='1', maxNumberOfPeople='1', rentalType='1'},1

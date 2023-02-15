@@ -1,0 +1,5 @@
+Room{freeServiceIncluded='tắm nắng'} Facility{serviceName='A', usableArea='50m vuông', rentalCost='10$', maxNumberOfPeople='5', rentalType='1 ngày'},1
+Room{freeServiceIncluded='tắm nắng'} Facility{serviceName='B', usableArea='100m vuông', rentalCost='50$', maxNumberOfPeople='10', rentalType='1 tháng'},2
+Room{freeServiceIncluded='tắm nắng'} Facility{serviceName='C', usableArea='200m vuông', rentalCost='100$', maxNumberOfPeople='15', rentalType='1 năm'},3
+Room{freeServiceIncluded='1'} Facility{serviceName='1', usableArea='1', rentalCost='1', maxNumberOfPeople='1', rentalType='1'},1
+Room{freeServiceIncluded='1'} Facility{serviceName='1', usableArea='1', rentalCost='1', maxNumberOfPeople='1', rentalType='1'},1

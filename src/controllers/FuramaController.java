@@ -25,13 +25,12 @@ public class FuramaController {
                     customerManagementController.customerDisplayMenu();
                     break;
                 case 3:
-                 FacilityManagementController facilityManagementController = new FacilityManagementController();
-                 facilityManagementController.FacilityDisplayMenu();
+                    FacilityManagementController facilityManagementController = new FacilityManagementController();
+                    facilityManagementController.FacilityDisplayMenu();
                     break;
                 case 4:
-                    System.out.println("1. Add new booking: ");
-                    System.out.println("2. Display list booking: ");
-                    System.out.println("3. Return main menu: ");
+                    BookingManagementController bookingManagementController = new BookingManagementController();
+                    bookingManagementController.bookingDisplayMenu();
                     break;
                 case 5:
                     System.out.println("1. Display list customers use service: ");
@@ -45,7 +44,6 @@ public class FuramaController {
         }
         while (true);
     }
-
 
     public static void main(String[] args) {
         displayMainMenu();
